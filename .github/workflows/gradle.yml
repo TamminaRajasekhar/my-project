@@ -28,8 +28,6 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - name: exection
-      run: chmod +x gradlew
     - name: execute
       run: /gradlew build
     - name: Build with Gradle
