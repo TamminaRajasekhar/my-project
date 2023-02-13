@@ -28,7 +28,5 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - name: execute
-      run: /gradlew build
     - name: Build with Gradle
-      run: /gradlew build
+      run: ./gradlew build
