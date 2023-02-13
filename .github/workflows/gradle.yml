@@ -12,6 +12,9 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+    
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -27,5 +30,7 @@ jobs:
         distribution: 'temurin'
     - name: exection
       run: chmod +x gradlew
+    - name: execute
+      run: /gradlew build
     - name: Build with Gradle
       run: /gradlew build
