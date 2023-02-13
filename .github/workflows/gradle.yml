@@ -13,9 +13,6 @@ on:
   pull_request:
     branches: [ "master" ]
 
-permissions:
-  contents: write
-
 jobs:
   build:
 
@@ -27,6 +24,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
-        distribution: 'temurin'
+    - name: exection
+      run: chmod +x gradlew
     - name: Build with Gradle
       run: /gradlew build
